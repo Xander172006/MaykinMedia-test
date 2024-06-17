@@ -8,6 +8,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+"""
+    Command to import cities and hotels from CSV files
+    The CSV files are fetched from the given URLs and stored in the database.
+    The credentials are fetched from the environment variables.
+"""
+
 class Command(BaseCommand):
     help = 'Import cities and hotels from CSV files'
 
