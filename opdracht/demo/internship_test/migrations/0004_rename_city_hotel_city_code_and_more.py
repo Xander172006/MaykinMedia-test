@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.RenameField(
             model_name='hotel',
             old_name='name',
-            new_name='hotel_name',
+            new_name='name',
         ),
     ]
