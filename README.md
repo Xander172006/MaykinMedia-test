@@ -33,7 +33,6 @@ MaykinMedia-test/
 │       └── manage.py
 │
 ├── .gitignore
-├── Case Maykin Media - Django (nederlands).pdf
 └── README.md
 ```
 <br />
