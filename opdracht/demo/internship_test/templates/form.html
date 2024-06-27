@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Kies een stad{% endblock %}
+
+{% block content %}
+<section class="from-section">
+    <h1 class="title-search-hotels">Kies een stad en bekijk de hotels</h1>
+
+    <!-- searchbar -->
+    <form class="search-hotels-form" method="post">
+        {% csrf_token %}
+        <input class="hotels-search-input" type="search" name="city" id="city" placeholder="zoek hotels in steden. . .">
+        <button class="hotels-search-button" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#08c485" class="bi bi-search font-bold" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+        </button>
+    </form>
+
+    <div id="suggestions" class="hotels-search-results">
+        <!-- Suggestions will be appended here by JavaScript -->
+    </div>
+
+    <div class="hotel-results">
+        {% if hotels %}
+            <ul class="hotel-list">
+                {% for hotel in hotels %}
+                    <li class="hotel-item">
+                        <div class="hotel-name">
+                            {{ selected_city.name }}
+                        </div>
+                        <div class="hotel-code">
+                            {{ hotel.hotel_code }}: {{ hotel.name }}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

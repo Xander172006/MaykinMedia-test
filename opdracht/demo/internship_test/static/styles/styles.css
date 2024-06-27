@@ -1,0 +1,212 @@
+/* general styles */
+body {
+    background-color: #28e6a3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.from-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-search-hotels {
+    color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+
+/* responsive styles */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    .search-hotels-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+    }
+
+    .hotels-search-input {
+        font-size: 1.1em;
+        width: 80%;
+        padding: 1em;
+        border: 0px solid;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .hotels-search-button {
+        font-size: 0.9em;
+        padding: 0.95em;
+        border: none;
+        background-color: white;
+        border: 0px solid;
+        margin-right: 1px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .hotels-search-button:hover {
+        background-color: #f2f2f2;
+    }
+
+    .hotels-search-input:focus {
+        outline: none;
+    }
+
+    .hotels-search-results {
+        margin-top: 0.1em;
+        width: 100%;
+        margin-right: auto;
+        background-color: white;
+    }
+
+    .hotel-results {
+        margin-top: 15%;
+        width: 100%;
+        display: flex;
+        margin-right: auto;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .hotel-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5em;
+        width: 90%;
+    }
+    
+    .hotel-item {
+        background-color: white;
+        padding: 1em;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    #suggestions {
+        position: absolute;
+        top: 25%;
+        width: 80%;
+    }
+    
+    #suggestions div:nth-child(2n) {
+        background-color: whitesmoke;
+    }
+    
+    #suggestions div {
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+    }
+}
+
+
+
+/* windows screen styles */
+@media only screen and (min-width: 600px) {
+    .search-hotels-form {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+    }
+
+    .hotels-search-input {
+        font-size: 1.1em;
+        width: 50%;
+        padding: 1em;
+        border: 0px solid;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+    }
+
+    .hotels-search-button {
+        height: calc(1em + 2 * 1.325rem);
+        border: none;
+        background-color: white;
+        border: 0px solid;
+        margin-right: 1px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        display: flex;
+        padding: 15px;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .hotels-search-button:hover {
+        background-color: #f2f2f2;
+    }
+
+    .hotels-search-input:focus {
+        outline: none;
+    }
+
+    .hotels-search-results {
+        margin-top: 0.1em;
+        width: 100%;
+        margin-right: auto;
+        background-color: white;
+    }
+
+    .hotel-results {
+        margin-top: 5%;
+        width: 100%;
+        display: flex;
+        margin-right: auto;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .hotel-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        width: 80%;
+    }
+    
+    .hotel-item {
+        background-color: white;
+        padding: 1em;
+        width: 35%;
+        margin-right: 2.5%;
+    }
+
+    #suggestions {
+        position: absolute;
+        top: 25%;
+        width: 25%;
+        overflow: hidden;
+        box-sizing: border-box
+    }
+    
+    #suggestions div:nth-child(2n) {
+        background-color: whitesmoke;
+    }
+    
+    #suggestions div {
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+        box-sizing: border-box;
+    }
+}

@@ -20,7 +20,6 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-TAILWIND_APP_NAME = 'theme'
 
 
 
@@ -47,8 +46,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "internship_test",
-    'tailwind',
-    'theme'
 ]
 
 MIDDLEWARE = [
@@ -62,6 +59,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'demo.urls'
+
 
 TEMPLATES = [
     {
@@ -135,6 +133,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "internship_test/static",
+]
 
 
 

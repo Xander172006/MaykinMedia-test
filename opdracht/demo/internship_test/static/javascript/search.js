@@ -17,8 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (data.length > 0) {
                         data.forEach(city => {
                             const div = document.createElement('div');
-                            div.classList.add('suggestion-item', 'p-2', 'cursor-pointer', 'hover:bg-gray-200');
+                            div.style.padding = '8px';
+                            div.style.cursor = 'pointer';
                             div.innerHTML = city.name;
+
+                            div.addEventListener('mouseover', function() {
+                                div.style.transform = 'translateX(10px)';
+                            });
+
+                            div.addEventListener('mouseout', function() {
+                                div.style.transform = 'translateX(0)';
+                            });
+
+                            
                             div.addEventListener('click', function() {
                                 cityInput.value = city.name;
                                 suggestionsBox.innerHTML = '';
@@ -37,3 +48,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
